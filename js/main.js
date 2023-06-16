@@ -16,3 +16,21 @@ searchInputEl.addEventListener('blur', function () {
   searchEl.classList.remove('focused');
   searchInputEl.setAttribute('placeholder', '');
 });
+
+// 페이지 스크롤에 따른 요소 제어
+const badgeEl = document.querySelector('header .badges');
+
+window.addEventListener('scroll', function () {
+  console.log(window.scrollY);
+  if (this.window.scrollY > 500) {
+    gsap.to(badgeEl, .6, {
+      opacity: 0,
+      display: 'none'
+    });
+  } else {
+    gsap.to(badgeEl, .6, {
+      opacity: 1,
+      display: 'block'
+    });
+  }
+});
