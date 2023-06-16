@@ -26,6 +26,9 @@
   <!-- javascript연결 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="./js/main.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -370,6 +373,55 @@
       </div>
     </div>
   </header>
-
+  <!-- VISUAL -->
+  <section class="visual">
+    <div class="inner">
+      <div class="title fade-in">
+        <img src="./images/visual_title.png" alt="DELIGHTFUL START TO THE YEARS"/>
+        <a href="javascript:void(0)" class="btn btn--brown">자세히 보기 </a>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup1.png" alt="Cup1" class="cup1 image"/>
+        <img src="./images/visual_cup1_text.png" alt="헤이즐럿 아메리카노" class="cup1 text"/>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup2.png" alt="Cup2" class="cup2 image"/>
+        <img src="./images/visual_cup2_text.png" alt="카라멜 크럼블 모카" class="cup2 text"/>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_spoon.png" alt="Spoon" class="spoon">
+      </div>
+    </div>
+  </section>
+  <!-- 공지사항 -->
+  <section class="notice">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+      <div class="inner__left">
+        <h2>공지사항</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">크리스마스 & 연말연시 매장 영업시간 변경 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 커피 영수증 이벤트</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">애플리케이션 버전 업데이트 실시 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자발표] 전자영수증 이벤트</a>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="notice-more">
+          <span class="material-icons">add_circle</span>
+        </a>
+      </div>
+      <div class="inner__right"></div>
+    </div>
+  </section>
 </body>
 </html>
