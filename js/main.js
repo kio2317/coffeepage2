@@ -45,3 +45,9 @@ fadeEls.forEach(function (fadeEls, index) {
     opacity: 1
   });
 });
+// swiper
+new Swiper('.notice .swiper', {
+  direction: 'vertical', //수직 슬라이드
+  autoplay: true, //자동 재생
+  loop: true // 반복 재생
+});
