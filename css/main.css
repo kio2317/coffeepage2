@@ -18,14 +18,15 @@ img{
   display: block;
 }
 /* btn버튼 공통스타일로 작업하면 편하다 */
-.btn{
+.btn {
   width: 130px;
   padding: 10px;
   border: 2px solid #333;
   border-radius: 4px;
+  box-sizing: border-box;
+  color: #333;
   font-size: 16px;
   font-weight: 700;
-  color: #333;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -432,4 +433,45 @@ header .badges .badge{
 .promotion .swiper-button-next::after{
   display: none;
 }
-
+/*REWARDS*/
+.rewards {
+  position: relative;
+}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rewards .inner {
+  background-image: url("../images/rewards.jpg");
+  height: 241px;
+}
+.rewards .btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+}
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1;
+}
