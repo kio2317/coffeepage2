@@ -26,6 +26,7 @@
   <!-- javascript연결 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="./js/main.js"></script>
+  <script defer src="./js/youtbe.js"></script>
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -463,16 +464,23 @@
     </div>
   </section>
   <!--REWARDS-->
-<section class="rewards">
-  <div class="bg-left"></div>
-  <div class="bg-right"></div>
-  <div class="inner">
-    <div class="btn-group">
-      <div class="btn btn--reverse sign-up">회원가입</div>
-      <div class="btn sign-in">로그인</div>
-      <div class="btn gift">e-Gift 선물하기</div>
+  <section class="rewards">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+      <div class="btn-group">
+        <div class="btn btn--reverse sign-up">회원가입</div>
+        <div class="btn sign-in">로그인</div>
+        <div class="btn gift">e-Gift 선물하기</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<!-- youtbe 영상 링크 추가하기 -->
+  <section class="youtube">
+    <div class="youtube__area">
+      <div id="player"></div>
+    </div>
+    <div class="youtube__cover"></div>
+  </section>
 </body>
 </html>
