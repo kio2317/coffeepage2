@@ -62,10 +62,12 @@ img{
   background-color: #D9AA8A;
 }
 .btn.btn--white{
-
+  color: #fff;
+  border-color: #fff;
 }
 .btn.btn--white:hover{
-
+  color: #333;
+  background-color: FFF;
 }
 /* HEADER */
 header{
@@ -535,7 +537,6 @@ header .badges .badge{
 .season-product .inner{
   height: 400px;
 }
-
 .season-product .floating3{
   position: absolute;
   top: -200px;
@@ -552,6 +553,7 @@ header .badges .badge{
 .season-product .text-group .description{
   margin-bottom: 15px;
 }
+/* reserve coffee */
 .reserve-coffee{
   background-image: url(../images/reserve_bg.jpg);
 }
@@ -572,4 +574,24 @@ header .badges .badge{
   position: absolute;
   top: 0;
   right: 0;
+}
+/* pick your favorite */
+.pick-your-favorite{
+  background-image: url(../images/favorite_bg.jpg);
+}
+.pick-your-favorite .inner{
+  padding: 110px 0;
+}
+.pick-your-favorite .text-group{
+  width: 362px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.pick-your-favorite .text-group .title{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description{
+  margin-bottom: 40px;
 }
