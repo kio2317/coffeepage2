@@ -78,3 +78,25 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.add('hide');
   }
 });
+// 애니메이션 동작 처리 floating
+gsap.to('.floating1', 1.5, {
+  delay: 1, //지연 시간 설정
+  y: 15,  // 수직으로 얼마나 움직일지 설정
+  repeat: -1, // 몇버 반복하는지 -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut // Easing 함수 적용
+});
+gsap.to('.floating2', 2, {
+  delay: 5, //지연 시간 설정
+  y: 15,  // 수직으로 얼마나 움직일지 설정
+  repeat: -1, // 몇버 반복하는지 -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut // Easing 함수 적용
+});
+gsap.to('.floating3', 2.5, {
+  delay: 1.5, //지연 시간 설정
+  y: 20,  // 수직으로 얼마나 움직일지 설정
+  repeat: -1, // 몇버 반복하는지 -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeInOut // Easing 함수 적용
+});
