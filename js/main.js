@@ -17,25 +17,49 @@ searchInputEl.addEventListener('blur', function () {
   searchInputEl.setAttribute('placeholder', '');
 });
 
-// 페이지 스크롤에 따른 요소 제어
+/**
+ * 페이지 스크롤에 따른 요소 제어
+ */
+// 페이지 스크롤에 영향을 받는 요소들을 검색!
 const badgeEl = document.querySelector('header .badges');
-
+const toTopEl = document.querySelector('#to-top');
+// 페이지에 스크롤 이벤트를 추가!
+// 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
 window.addEventListener('scroll', function () {
-  console.log(window.scrollY);
-  if (this.window.scrollY > 500) {
-    // Badge 요소 숨김
+  // 페이지 스크롤 위치가 500px이 넘으면.
+  if (window.scrollY > 500) {
+    // Badge 요소 숨기기!
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
     });
+    // 상단으로 이동 버튼 보이기!
+    gsap.to(toTopEl, .6, {
+      opacity: 1,
+      x: 0
+    });
+
+  // 페이지 스크롤 위치가 500px이 넘지 않으면.
   } else {
-    // Badge 요소 보임
+    // Badge 요소 보이기!
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    // 상단으로 이동 버튼 숨기기!
+    gsap.to(toTopEl, .6, {
+      opacity: 0,
+      x: 100
+    });
   }
 });
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .6, {
+    scrollTo: 0
+  });
+});
+
+
 // 나타날 요소(.fade-in)들을 찾기
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 // 요소들은 하나씩 반복처리
@@ -51,6 +75,7 @@ new Swiper('.notice .swiper', {
   autoplay: true, //자동 재생
   loop: true // 반복 재생
 });
+
 // swipter promotion
 new Swiper('.promotion .swiper', {
   autoplay: true, // 자동재생
@@ -65,6 +90,18 @@ new Swiper('.promotion .swiper', {
   navigation: { // 슬라이드이전/다음 버튼 
     prevEL: '.promotion .swiper-button-prev', //이전
     nextEL: '.promotion .swiper-button-next' //다음
+  }
+});
+
+// footer부분에 들어가는 swiper
+new Swiper('.awards .swiper', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEL: '.awards .swiper-button-prev',
+    nextEL: '.awards .swiper-button-next'
   }
 });
 // toggle 버튼 동작 하기
@@ -115,3 +152,6 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 });
+// copyright 연도 자동화
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
